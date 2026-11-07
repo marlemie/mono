@@ -12,4 +12,8 @@ defmodule KV.Bucket do
   def put(id, key, value) do
     Agent.update(id, fn kv -> Map.put(kv, key, value) end)
   end
+
+  def delete(id, key) do
+    Agent.get_and_update(id, fn kv -> Map.pop(kv, key) end)
+  end
 end
