@@ -1,6 +1,6 @@
 # KV
 
-**TODO: Add description**
+Project following the [official example](https://elixir.hexdocs.pm/introduction-to-mix.html).
 
 ## Installation
 
