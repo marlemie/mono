@@ -1,6 +1,8 @@
 defmodule KV.Bucket do
-  def start_link(state) do
-    Agent.start_link(fn -> %{} end)
+  use Agent
+
+  def start_link(opts) do
+    Agent.start_link(fn -> %{} end, opts)
   end
 
   def get(id, key) do
